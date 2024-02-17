@@ -1,0 +1,46 @@
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+
+class Solution:
+    def letterCombinations(self, digits: str) -> List[str]:
+        a={2:["a","b","c"],3:["d","e","f"],4:["g","h","i"],5:["j","k","l"],6:["m","n","o"],7:["p","q","r","s"],8:["t","u","v"],9:["w","x","y","z"]}
+        d=[]
+        for i in digits:
+            d.append(int(i))
+        m=[]
+        if(len(d)==0):
+           return m
+        elif(len(d)==1):
+            return (a.get(d[0]))
+        elif(len(d)==2):
+
+            t=(a.get(d[0]))
+            temp=(a.get(d[1]))
+            for j in range(len(t)):
+                    for k in range(len(temp)):
+                        m.append(t[j]+temp[k])
+            return(m)
+        elif(len(d)==3):
+            t=(a.get(d[0]))
+            temp=(a.get(d[1]))
+            temp2=(a.get(d[2]))
+            for j in range(len(t)):
+                    for k in range(len(temp)):
+                        for l in range(len(temp2)):
+                             m.append(t[j]+temp[k]+temp2[l])
+            return(m)
+        elif(len(d)==4):
+            t=(a.get(d[0]))
+            temp=(a.get(d[1]))
+            temp2=(a.get(d[2]))
+            temp3=(a.get(d[3]))
+            for j in range(len(t)):
+                    for k in range(len(temp)):
+                        for l in range(len(temp2)):
+                            for q in range(len(temp3)):
+                             m.append(t[j]+temp[k]+temp2[l]+temp3[q])
+            return(m)
+        
+
+
+
+
