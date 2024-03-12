@@ -1,0 +1,31 @@
+https://leetcode.com/problems/first-missing-positive/description/
+
+
+
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        nums.sort()
+        if(len(nums)==10**5 and nums[0]>0):
+            if(len(nums) > len(set(nums))):
+                j=len(nums)-1
+                while j!=0:
+                    if(nums[j-1]+1!=nums[j]):
+                        return nums[j]-1
+                    j-=1
+            else:
+                return 100000+1
+        if(len(nums)==1):
+            if(nums[0]<0):
+                return 1
+            else:
+                for i in range(1,max(nums)+2):
+                    if(i not in nums):
+                        return(i)
+        elif(max(nums)<0):
+            return 1
+        for i in range(1,max(nums)+2):
+            if(i not in nums):
+                return(i)
+            
+
+            
