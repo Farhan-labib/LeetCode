@@ -1,0 +1,20 @@
+https://leetcode.com/problems/maximum-subarray/description/
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        i=1
+        if(len(nums)==1):
+            return nums[0]
+        else:
+            while i!=len(nums):
+                if(nums[i-1]>=0):
+                    nums[i]+=nums[i-1]
+                i+=1
+            return max(nums)
+                
+
+            
+
+
+            
