@@ -1,0 +1,9 @@
+https://leetcode.com/problems/permutations-ii/description/
+
+
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        import itertools
+        a = list(itertools.permutations(nums))
+        a=set(a)
+        return a
