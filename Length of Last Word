@@ -1,0 +1,23 @@
+https://leetcode.com/problems/length-of-last-word/description/
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        a=s.split(" ")
+        print(a)
+        c=-1
+        b=""
+        while c!=0:
+            if(a[c]==""):
+                c-=1
+            else:
+                b=a[c]
+                c=0
+                break
+        c=0
+        for i in b:
+            c+=1
+        print(c)
+        return c
+
+
+        
