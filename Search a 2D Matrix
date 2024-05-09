@@ -1,0 +1,12 @@
+https://leetcode.com/problems/search-a-2d-matrix/description/
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        for i in matrix:
+            if(i[-1]==target or i[0]==target):
+                return True
+            if(target<i[-1]):
+                for j in i:
+                    if(j==target):
+                        return True
+        return False
