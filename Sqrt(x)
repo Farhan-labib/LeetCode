@@ -1,0 +1,16 @@
+https://leetcode.com/problems/sqrtx/description/
+
+
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        a=x**0.5
+        a=str(a)
+        if("." not in a):
+            return int(a)
+        else:
+            b=""
+            for i in a:
+                if(i!="."):
+                    b+=i
+                else:
+                    return int(b)
