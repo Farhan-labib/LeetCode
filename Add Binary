@@ -1,0 +1,29 @@
+https://leetcode.com/problems/add-binary/description/
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        a2=0
+        b2=0
+        a=a[::-1]
+        b=b[::-1]
+        c=0
+        for i in a:
+            a2+=int(i)*2**(c)
+            c+=1
+        c=0
+        for i in b:
+            b2+=int(i)*2**(c)
+            c+=1
+        d=a2+b2
+        if(d==0):
+            return("0")
+        else:
+            output=""
+            print(d)
+            while d!=0:
+                output+=str(int(d)%2)
+                d=d//2
+            print(output)
+            output=output[::-1]
+            return output
+                
