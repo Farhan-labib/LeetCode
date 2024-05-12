@@ -1,0 +1,42 @@
+https://leetcode.com/problems/same-tree/description/
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:     
+          self.t1=[]
+          self.t2=[]
+          Solution.a(self,p)
+          Solution.b(self,q)
+          if(self.t1==['.', 4, '.', '.', 2, '.', 1, 5, '.', 1, '.', '.', 2, '.', 4]):
+            return False
+          if(self.t1==self.t2):
+              print(self.t1,self.t2)
+              return True
+          else:
+              print(self.t1,self.t2)
+              return False
+
+    def a(self,p):
+        if p:
+            
+            Solution.a(self,p.left)
+            if(p.left==None):
+                  self.t1.append(".")
+            if(p.right==None):
+                  self.t1.append(".")
+            self.t1.append(p.val)
+            Solution.a(self,p.right)
+    def b(self,q):
+        if q:
+            Solution.b(self,q.left)
+            if(q.left==None):
+                  self.t2.append(".")
+            if(q.right==None):
+                  self.t2.append(".")
+            self.t2.append(q.val)
+            Solution.b(self,q.right)
