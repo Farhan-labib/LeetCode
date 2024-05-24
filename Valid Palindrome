@@ -1,0 +1,13 @@
+https://leetcode.com/problems/valid-palindrome/description/
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        a=""
+        for i in s:
+            if(i.isupper()==True  or i.islower()==True or i.isdigit()==True):
+                a+=i
+        a=a.lower()
+        if(a==a[::-1]):
+            return True
+        else:
+            return False
