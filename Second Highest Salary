@@ -1,0 +1,4 @@
+https://leetcode.com/problems/second-highest-salary/description/
+
+# Write your MySQL query statement below
+select max(salary) as SecondHighestSalary from Employee where salary<(SELECT MAX(SALARY) FROM Employee);
