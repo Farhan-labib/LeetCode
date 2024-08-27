@@ -1,0 +1,26 @@
+https://leetcode.com/problems/isomorphic-strings/description/
+
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        a={}
+        x=[]
+        for i in range(len(s)):
+
+            if(s[i] not in a and t[i] not in x):
+                a[s[i]]=t[i]
+                x.append(t[i])
+            else:
+        
+                for k,v in a.items():
+                    if(s[i] not in a):
+                        return False
+                    if(k==s[i]):
+                        if(v==t[i]):
+                            continue
+                        else:
+                            return False
+                    
+
+        return True
+    
+  
