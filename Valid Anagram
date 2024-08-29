@@ -1,0 +1,16 @@
+https://leetcode.com/problems/valid-anagram/description/
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if(len(s)==len(t)):
+                for i in s:
+                    a=s.count(i)
+                    b=t.count(i)
+                    if(a!=b):
+                        return False 
+        else:
+            return False
+                    
+        return True
+                
