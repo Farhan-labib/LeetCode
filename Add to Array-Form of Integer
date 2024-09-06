@@ -1,0 +1,13 @@
+https://leetcode.com/problems/add-to-array-form-of-integer/description/
+
+class Solution:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+        num=map(str,num)
+        a="".join(num)
+        a=int(a)
+        c=a+k
+        c=str(c)
+        output=[]
+        for i in c:
+            output.append(int(i))
+        return output
