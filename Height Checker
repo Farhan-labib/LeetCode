@@ -1,0 +1,14 @@
+https://leetcode.com/problems/height-checker/description/
+
+
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        n=[]
+        for i in heights:
+            n.append(i)
+        heights.sort()
+        a=0
+        for j in range(len(heights)):
+            if(heights[j]!=int(n[j])):
+                 a+=1
+        return a
